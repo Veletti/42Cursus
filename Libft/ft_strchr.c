@@ -1,25 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rvela-fe <rvela-fe@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/20 21:11:11 by rvela-fe          #+#    #+#             */
-/*   Updated: 2022/09/24 18:50:35 by rvela-fe         ###   ########.fr       */
+/*   Created: 2022/09/24 17:28:03 by rvela-fe          #+#    #+#             */
+/*   Updated: 2022/09/24 20:21:48 by rvela-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+char	*ft_strchr(const char *s, int c)
 {
-	size_t	i;
-
-	i = 0;
-	while (s[i])
+	while (*s != '\0')
 	{
-		i++;
+		if (*s == c)
+		{
+			return ((char *) s);
+		}
+		else
+		{
+			s++;
+		}
 	}
-	return (i);
+	return (0);
 }
+
+/*int main()
+{
+    char str[] = "My name is Ayush";
+    printf("%s",ft_strchr(str, 'a'));
+    return 0;
+}
+*/

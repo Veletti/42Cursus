@@ -6,7 +6,7 @@
 #    By: rvela-fe <rvela-fe@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/20 20:17:24 by rvela-fe          #+#    #+#              #
-#    Updated: 2022/09/23 21:11:44 by rvela-fe         ###   ########.fr        #
+#    Updated: 2022/09/24 19:04:26 by rvela-fe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ NAME = libft.a
 
 SRCS = ft_strlcat.c ft_strlen.c ft_strncmp.c ft_toupper.c ft_tolower.c \
 	   ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
-	   ft_strlcpy.c
+	   ft_strlcpy.c ft_strchr.c
 
 OBJS = $(SRCS:.c=.o)
 
