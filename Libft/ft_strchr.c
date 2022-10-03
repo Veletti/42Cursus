@@ -6,33 +6,28 @@
 /*   By: rvela-fe <rvela-fe@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 17:28:03 by rvela-fe          #+#    #+#             */
-/*   Updated: 2022/09/24 20:21:48 by rvela-fe         ###   ########.fr       */
+/*   Updated: 2022/10/03 21:41:42 by rvela-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *str, int c)
 {
-	while (*s != '\0')
-	{
-		if (*s == c)
-		{
-			return ((char *) s);
-		}
-		else
-		{
-			s++;
-		}
-	}
-	return (0);
-}
+	unsigned char	i;
 
-/*int main()
-{
-    char str[] = "My name is Ayush";
-    printf("%s",ft_strchr(str, 'a'));
-    return 0;
+	i = c;
+	while (*str != '\0')
+	{
+		if (*str == i)
+		{
+			return ((char *) str);
+		}
+		str++;
+	}
+	if (i == '\0')
+	{
+		return ((char *) str);
+	}
+	return ((char *) '\0');
 }
-*/

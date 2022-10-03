@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rvela-fe <rvela-fe@student.42barcel>       +#+  +:+       +#+        */
+/*   By: rvela-fe <rvela-fe@student.barcel>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/22 21:14:53 by rvela-fe          #+#    #+#             */
-/*   Updated: 2022/09/23 21:53:55 by rvela-fe         ###   ########.fr       */
+/*   Created: 2022/10/03 21:05:57 by rvela-fe          #+#    #+#             */
+/*   Updated: 2022/10/03 21:06:37 by rvela-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		dst[i] = src[i];
 		i++;
 	}
-	if (size)
+	if (size != '\0')
 		dst[i] = '\0';
 	return (cnt);
 }
