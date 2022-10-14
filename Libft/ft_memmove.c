@@ -6,13 +6,13 @@
 /*   By: rvela-fe <rvela-fe@student.barcel>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 16:12:47 by rvela-fe          #+#    #+#             */
-/*   Updated: 2022/10/13 17:02:54 by rvela-fe         ###   ########.fr       */
+/*   Updated: 2022/10/14 18:31:43 by rvela-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void	chrcopy(void *dst, const void *src, size_t len)
 {
 	char	*dest;
 	char	*sorc;
@@ -21,10 +21,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	dest = dst;
 	sorc = (char *)src;
 	i = 0;
-	if (dest == sorc || !len)
-	{
-		return (dest);
-	}
 	if (dest < sorc)
 	{
 		while (i < len)
@@ -41,7 +37,16 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 			len--;
 		}
 	}
-	return (dest);
+}
+
+void	*ft_memmove(void *dst, const void *src, size_t len)
+{
+	if (dst == src || !len)
+	{
+		return (dst);
+	}
+	chrcopy(dst, src, len);
+	return (dst);
 }
 
 /*

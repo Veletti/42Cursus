@@ -6,7 +6,7 @@
 /*   By: rvela-fe <rvela-fe@student.barcel>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 21:56:53 by rvela-fe          #+#    #+#             */
-/*   Updated: 2022/10/13 13:15:24 by rvela-fe         ###   ########.fr       */
+/*   Updated: 2022/10/14 18:33:08 by rvela-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	unsigned char 	*src;
+	unsigned char	*src;
 	size_t			i;
 
 	src = (unsigned char *)b;
