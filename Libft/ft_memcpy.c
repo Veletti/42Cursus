@@ -1,30 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rvela-fe <rvela-fe@student.barcel>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/04 21:56:53 by rvela-fe          #+#    #+#             */
-/*   Updated: 2022/10/13 13:15:24 by rvela-fe         ###   ########.fr       */
+/*   Created: 2022/10/13 15:46:49 by rvela-fe          #+#    #+#             */
+/*   Updated: 2022/10/13 16:11:12 by rvela-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	unsigned char 	*src;
-	size_t			i;
+	char	*sorc;
+	char	*dest;
+	size_t	i;
 
-	src = (unsigned char *)b;
+	sorc = (char *)src;
+	dest = dst;
 	i = 0;
-	while (i < len)
+	if (sorc == (char *)'\0' && dest == (char *)'\0')
 	{
-		*(src + i) = (unsigned char)c;
+		return (0);
+	}
+	while (i < n)
+	{
+		dest[i] = sorc[i];
 		i++;
 	}
-	return (b);
+	return (dest);
 }
 
-/*Copia el caracter c (un char sin signo) a los primeros n caracteres de (b).*/
+/*Copia n caracteres del area de la memoria de src en el area de la memoria de dst.*/
