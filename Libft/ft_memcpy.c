@@ -6,7 +6,7 @@
 /*   By: rvela-fe <rvela-fe@student.barcel>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 15:46:49 by rvela-fe          #+#    #+#             */
-/*   Updated: 2022/10/14 18:15:42 by rvela-fe         ###   ########.fr       */
+/*   Updated: 2022/10/15 18:36:35 by rvela-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	i = 0;
 	if (sorc == (char *) '\0' && dest == (char *) '\0')
 	{
-		return (0);
+		return (NULL);
 	}
 	while (i < n)
 	{

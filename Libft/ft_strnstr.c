@@ -6,7 +6,7 @@
 /*   By: rvela-fe <rvela-fe@student.barcel>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 22:03:53 by rvela-fe          #+#    #+#             */
-/*   Updated: 2022/10/03 23:15:29 by rvela-fe         ###   ########.fr       */
+/*   Updated: 2022/10/15 18:45:53 by rvela-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,5 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		}
 		i++;
 	}
-	return ((char *) '\0');
+	return (NULL);
 }

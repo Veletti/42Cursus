@@ -6,7 +6,7 @@
 /*   By: rvela-fe <rvela-fe@student.barcel>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 20:13:34 by rvela-fe          #+#    #+#             */
-/*   Updated: 2022/10/04 21:05:33 by rvela-fe         ###   ########.fr       */
+/*   Updated: 2022/10/15 18:44:17 by rvela-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /*La función memchr() localiza la primera aparición de c
@@ -31,5 +31,5 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		}
 		i++;
 	}
-	return (0);
+	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: rvela-fe <rvela-fe@student.barcel>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 21:42:31 by rvela-fe          #+#    #+#             */
-/*   Updated: 2022/10/13 12:03:08 by rvela-fe         ###   ########.fr       */
+/*   Updated: 2022/10/15 18:41:03 by rvela-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strrchr(const char *s, int c)
 			return ((char *)s + i);
 		}
 	}
-	return (0);
+	return (NULL);
 }
 
 /* Devuelve un puntero en la última ocurrencia del carácter c en la string s. */

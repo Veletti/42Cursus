@@ -6,7 +6,7 @@
 /*   By: rvela-fe <rvela-fe@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 17:28:03 by rvela-fe          #+#    #+#             */
-/*   Updated: 2022/10/04 21:54:36 by rvela-fe         ###   ########.fr       */
+/*   Updated: 2022/10/15 18:40:07 by rvela-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ char	*ft_strchr(const char *str, int c)
 	{
 		return ((char *) str);
 	}
-	return ((char *) '\0');
+	return (NULL);
 }
