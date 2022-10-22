@@ -6,7 +6,7 @@
 /*   By: rvela-fe <rvela-fe@student.42barc...>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 17:17:00 by rvela-fe          #+#    #+#             */
-/*   Updated: 2022/10/15 18:29:42 by rvela-fe         ###   ########.fr       */
+/*   Updated: 2022/10/21 20:41:40 by rvela-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
 
-	ptr = (void *)malloc(count * size);
+	ptr = (void *)malloc(sizeof(void) * (count * size));
 	if (!ptr)
 	{
 		return (NULL);
