@@ -6,13 +6,13 @@
 /*   By: rvela-fe <rvela-fe@student.42barc...>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 12:51:00 by rvela-fe          #+#    #+#             */
-/*   Updated: 2022/10/30 13:09:24 by rvela-fe         ###   ########.fr       */
+/*   Updated: 2022/10/30 13:56:52 by rvela-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {
-	write (fd, &c, sizeof(c));
+	write (fd, &c, 1);
 }
