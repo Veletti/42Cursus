@@ -6,7 +6,7 @@
 /*   By: rvela-fe <rvela-fe@student.barcel>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 17:34:12 by rvela-fe          #+#    #+#             */
-/*   Updated: 2022/11/08 20:19:13 by rvela-fe         ###   ########.fr       */
+/*   Updated: 2022/11/12 16:35:16 by rvela-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,25 +15,19 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
-	size_t	j;
 	char	*str;
 
-	str = (char*)malloc(sizeof(*s) * (len + 1));
-	if (!str)
-	{
+	i = ft_strlen(s);
+	if (!s)
 		return (NULL);
-	}
-	i = 0;
-	j = 0;
-	while (s[i])
-	{
-		if (i >= start && j < len)
-		{
-			str[j] = s[i];
-			j++;
-		}
-		i++;
-	}
-	str[j] = 0;
+	if (start > i)
+		return (ft_strdup(""));
+	if (start + len > i)
+		len = i - start;
+	str = (char *)malloc(sizeof(*s) * (len + 1));
+	if (!str)
+		return (NULL);
+	ft_memcpy(str, s + start, len);
+	str[len] = '\0';
 	return (str);
 }
