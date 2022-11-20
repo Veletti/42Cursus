@@ -6,7 +6,7 @@
 /*   By: rvela-fe <rvela-fe@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 20:36:26 by rvela-fe          #+#    #+#             */
-/*   Updated: 2022/11/12 19:13:48 by rvela-fe         ###   ########.fr       */
+/*   Updated: 2022/11/19 20:11:53 by rvela-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,5 @@ void	ft_putnbr_fd(int n, int fd);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
+char	**ft_split(char const *s, char c);
 #endif
