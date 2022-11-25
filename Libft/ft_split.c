@@ -6,7 +6,7 @@
 /*   By: rvela-fe <rvela-fe@student.42barc...>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 18:45:31 by rvela-fe          #+#    #+#             */
-/*   Updated: 2022/11/19 20:40:59 by rvela-fe         ###   ########.fr       */
+/*   Updated: 2022/11/25 21:57:09 by rvela-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,33 +60,36 @@ static void	ft_free(char **str, int i)
 	free(str);
 }
 
+static int	ft_while(char const *s, char c, int i)
+{
+	while (s[i] == c)
+		i++;
+	return (i);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	int		i;
 	int		j;
 	int		size;
-	int		del;
 	char	**srcs;
 
 	i = 0;
-	j = 0;
-	del = ft_count_del(s, c);
-	srcs = (char **)malloc(sizeof(char *) * (del + 1));
+	j = -1;
+	srcs = (char **)malloc(sizeof(char *) * (ft_count_del(s, c) + 1));
 	if (!srcs)
 		return (0);
-	while (j < del)
+	while (++j < ft_count_del(s, c))
 	{
-		while (s[i] == c)
-			i++;
+		i = ft_while(s, c, i);
 		size = ft_size_word(s, c, i);
 		srcs[j] = ft_substr(s, i, size);
 		if (!srcs[j])
 		{
-			ft_free(srcs, j);
+			ft_free(srcs, i);
 			return (NULL);
 		}
 		i += size;
-		j++;
 	}
 	srcs[j] = 0;
 	return (srcs);
