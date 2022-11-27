@@ -6,7 +6,7 @@
 /*   By: rvela-fe <rvela-fe@student.42barc...>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 18:45:31 by rvela-fe          #+#    #+#             */
-/*   Updated: 2022/11/27 13:18:27 by rvela-fe         ###   ########.fr       */
+/*   Updated: 2022/11/27 13:20:25 by rvela-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ static int	ft_size_word(char const *s, char c, int i)
 		i++;
 	}
 	return (size);
-}
+xs}
 
 static void	ft_free(char **str, int i)
 {
