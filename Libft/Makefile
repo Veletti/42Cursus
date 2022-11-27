@@ -6,7 +6,7 @@
 #    By: rvela-fe <rvela-fe@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/20 20:17:24 by rvela-fe          #+#    #+#              #
-#    Updated: 2022/11/19 20:11:30 by rvela-fe         ###   ########.fr        #
+#    Updated: 2022/11/27 11:14:06 by rvela-fe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ SRCS = ft_strlcat.c ft_strlen.c ft_strncmp.c ft_toupper.c ft_tolower.c \
 		ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_memcmp.c ft_atoi.c \
 		ft_calloc.c ft_strdup.c ft_striteri.c ft_strmapi.c ft_putchar_fd.c \
 		ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_substr.c ft_strjoin.c \
-		ft_strtrim.c ft_split.c
+		ft_strtrim.c ft_split.c ft_itoa.c
 
 OBJS = $(SRCS:.c=.o)
 
