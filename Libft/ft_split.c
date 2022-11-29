@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rvela-fe <rvela-fe@student.42barc...>      +#+  +:+       +#+        */
+/*   By: rvela-fe <rvela-fe@student.barcel>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/19 18:45:31 by rvela-fe          #+#    #+#             */
-/*   Updated: 2022/11/27 13:20:25 by rvela-fe         ###   ########.fr       */
+/*   Created: 2022/11/29 23:12:04 by rvela-fe          #+#    #+#             */
+/*   Updated: 2022/11/29 23:41:25 by rvela-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_count_del(char const *s, char c)
+static size_t	ft_count_del(char const *s, char c)
 {
 	int	i;
 	int	del;
@@ -37,54 +37,44 @@ static int	ft_count_del(char const *s, char c)
 	return (del);
 }
 
-static int	ft_size_word(char const *s, char c, int i)
+static char	**ft_free(char **str)
 {
-	int	size;
+	size_t	i;
 
-	size = 0;
-	while (s[i] != c && s[i])
-	{
-		size++;
-		i++;
-	}
-	return (size);
-xs}
-
-static void	ft_free(char **str, int i)
-{
-	while (i > 0)
+	i = 0;
+	while (str[i])
 	{
 		free (str[i]);
-		i--;
-	}	
+		i++;
+	}
 	free(str);
+	return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	int		i;
-	int		j;
-	int		size;
 	char	**srcs;
+	size_t	i;
+	size_t	count;
+	size_t	pos;
 
 	i = 0;
-	j = -1;
+	count = 0;
 	srcs = (char **)malloc(sizeof(char *) * (ft_count_del(s, c) + 1));
 	if (!srcs)
 		return (0);
-	while (++j < ft_count_del(s, c))
+	while (i < ft_count_del(s, c) && s[count] != '\0')
 	{
-		while (s[i] == c)
-			i++;
-		size = ft_size_word(s, c, i);
-		srcs[j] = ft_substr(s, i, size);
-		if (!srcs[j])
-		{
-			ft_free(srcs, i);
-			return (NULL);
-		}
-		i += size;
+		while (s[count] == c)
+			count++;
+		pos = count;
+		while (s[count] != c && s[count] != '\0')
+			count++;
+		srcs[i] = ft_substr(s, pos, count - pos);
+		if (srcs[i] == NULL)
+			return (ft_free(srcs));
+		i++;
 	}
-	srcs[j] = 0;
+	srcs[i] = 0;
 	return (srcs);
 }
