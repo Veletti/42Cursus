@@ -6,13 +6,13 @@
 /*   By: rvela-fe <rvela-fe@student.barcel>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 20:32:57 by rvela-fe          #+#    #+#             */
-/*   Updated: 2022/12/01 20:36:16 by rvela-fe         ###   ########.fr       */
+/*   Updated: 2022/12/01 20:37:59 by rvela-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_while(char const *src, char *str, size_t j)
+static int	ft_while(char const *src, char *str, size_t j)
 {
 	int	i;
 
