@@ -6,42 +6,43 @@
 /*   By: rvela-fe <rvela-fe@student.barcel>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 20:32:57 by rvela-fe          #+#    #+#             */
-/*   Updated: 2022/11/19 18:41:55 by rvela-fe         ###   ########.fr       */
+/*   Updated: 2022/12/01 20:36:16 by rvela-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_while(char const *src, char *str, int i, size_t x)
+int	ft_while(char const *src, char *str, size_t j)
 {
+	int	i;
+
+	i = 0;
 	while (src[i])
 	{
-		str[x] = src[i];
+		str[j] = src[i];
 		i++;
-		x++;
+		j++;
 	}
-	return (x);
+	return (j);
 }
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
-	int		count_s1;
-	int		count_s2;
-	int		i;
+	int		len_s1;
+	int		len_s2;
 	int		j;
 
-	count_s1 = ft_strlen(s1);
-	count_s2 = ft_strlen(s2);
-	str = (char *)malloc(sizeof(char) * (count_s1 + count_s2 + 1));
+	len_s1 = ft_strlen(s1);
+	len_s2 = ft_strlen(s2);
+	str = (char *)malloc(sizeof(char) * (len_s1 + len_s2 + 1));
 	if (!str)
 	{
 		return (NULL);
 	}
-	i = 0;
 	j = 0;
-	j = ft_while(s1, str, i, 0);
-	j = ft_while(s2, str, i, j);
+	j = ft_while(s1, str, j);
+	j = ft_while(s2, str, j);
 	str[j] = '\0';
 	return (str);
 }
