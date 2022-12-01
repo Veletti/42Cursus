@@ -6,7 +6,7 @@
 /*   By: rvela-fe <rvela-fe@student.42barc...>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 17:05:43 by rvela-fe          #+#    #+#             */
-/*   Updated: 2022/11/19 15:31:22 by rvela-fe         ###   ########.fr       */
+/*   Updated: 2022/12/01 20:41:12 by rvela-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	{
 		i--;
 	}
-	str = ft_substr ((char *)s1, 0, i + 1);
+	str = ft_substr (s1, 0, i + 1);
 	return (str);
 }
