@@ -6,13 +6,13 @@
 /*   By: rvela-fe <rvela-fe@student.42barc...>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 11:23:48 by rvela-fe          #+#    #+#             */
-/*   Updated: 2022/11/27 13:08:21 by rvela-fe         ###   ########.fr       */
+/*   Updated: 2022/12/01 20:44:53 by rvela-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_len_number(int n)
+static int	ft_len_number(int n)
 {
 	int	i;
 
