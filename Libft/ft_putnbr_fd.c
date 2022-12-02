@@ -6,18 +6,18 @@
 /*   By: rvela-fe <rvela-fe@student.barcel>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 14:00:04 by rvela-fe          #+#    #+#             */
-/*   Updated: 2022/11/02 16:29:58 by rvela-fe         ###   ########.fr       */
+/*   Updated: 2022/12/02 11:12:32 by rvela-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar(int n, int fd)
+static void	ft_putchar(int n, int fd)
 {
-	char	a;
+	char	c;
 
-	a = n + '0';
-	write (fd, &a, 1);
+	c = n + '0';
+	write (fd, &c, 1);
 }
 
 void	ft_putnbr_fd(int n, int fd)
