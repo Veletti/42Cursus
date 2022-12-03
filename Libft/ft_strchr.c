@@ -6,7 +6,7 @@
 /*   By: rvela-fe <rvela-fe@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 17:28:03 by rvela-fe          #+#    #+#             */
-/*   Updated: 2022/10/15 18:40:07 by rvela-fe         ###   ########.fr       */
+/*   Updated: 2022/12/03 18:15:01 by rvela-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 char	*ft_strchr(const char *str, int c)
 {
-	unsigned char	i;
+	unsigned char	len;
 
-	i = c;
+	len = c;
 	while (*str != '\0')
 	{
-		if (*str == i)
+		if (*str == len)
 		{
 			return ((char *) str);
 		}
 		str++;
 	}
-	if (i == '\0')
+	if (len == '\0')
 	{
 		return ((char *) str);
 	}
