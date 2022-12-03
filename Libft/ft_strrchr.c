@@ -6,7 +6,7 @@
 /*   By: rvela-fe <rvela-fe@student.barcel>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 21:42:31 by rvela-fe          #+#    #+#             */
-/*   Updated: 2022/10/15 18:41:03 by rvela-fe         ###   ########.fr       */
+/*   Updated: 2022/12/03 17:58:44 by rvela-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,20 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	size_t	i;
+	size_t	len;
 
-	i = ft_strlen(s);
+	len = ft_strlen(s);
 	if ((char)c == '\0')
 	{
-		return ((char *)s + i);
+		return ((char *)s + len);
 	}
-	while (i > 0)
+	while (len > 0)
 	{
-		i--;
-		if (*(s + i) == (char) c)
+		len--;
+		if (*(s + len) == (char) c)
 		{
-			return ((char *)s + i);
+			return ((char *)s + len);
 		}
 	}
 	return (NULL);
 }
-
-/* Devuelve un puntero en la última ocurrencia del carácter c en la string s. */
