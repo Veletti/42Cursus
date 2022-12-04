@@ -6,13 +6,9 @@
 /*   By: rvela-fe <rvela-fe@student.barcel>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 20:13:34 by rvela-fe          #+#    #+#             */
-/*   Updated: 2022/10/15 18:44:17 by rvela-fe         ###   ########.fr       */
+/*   Updated: 2022/12/04 19:02:58 by rvela-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/*La función memchr() localiza la primera aparición de c
-  (convertido en char sin signo) en la cadena s.
-  Devuelve un puntero al byte ubicado, o NUL si no existe
-  tal byte dentro de n bytes.*/
 
 #include <stdio.h>
 
