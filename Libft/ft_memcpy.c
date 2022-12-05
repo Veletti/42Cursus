@@ -6,7 +6,7 @@
 /*   By: rvela-fe <rvela-fe@student.barcel>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 15:46:49 by rvela-fe          #+#    #+#             */
-/*   Updated: 2022/10/15 18:36:35 by rvela-fe         ###   ########.fr       */
+/*   Updated: 2022/12/04 19:21:39 by rvela-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	sorc = (char *)src;
 	dest = dst;
 	i = 0;
-	if (sorc == (char *) '\0' && dest == (char *) '\0')
+	if (sorc == NULL && dest == NULL)
 	{
 		return (NULL);
 	}
@@ -32,8 +32,3 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-/*
-Copia n caracteres del area de la memoria
-de src en el area de la memoria de dst.
-*/
