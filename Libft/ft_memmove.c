@@ -6,22 +6,22 @@
 /*   By: rvela-fe <rvela-fe@student.barcel>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 16:12:47 by rvela-fe          #+#    #+#             */
-/*   Updated: 2022/10/14 18:31:43 by rvela-fe         ###   ########.fr       */
+/*   Updated: 2022/12/05 22:07:06 by rvela-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	chrcopy(void *dst, const void *src, size_t len)
+static void	ft_strcpy(void *dst, const void *src, size_t len)
 {
 	char	*dest;
 	char	*sorc;
 	size_t	i;
 
-	dest = dst;
+	dest = (char *)dst;
 	sorc = (char *)src;
 	i = 0;
-	if (dest < sorc)
+	if (dst < src)
 	{
 		while (i < len)
 		{
@@ -29,7 +29,7 @@ void	chrcopy(void *dst, const void *src, size_t len)
 			i++;
 		}
 	}
-	if (dest > sorc)
+	if (src < dst)
 	{
 		while (len > 0)
 		{
@@ -45,17 +45,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	{
 		return (dst);
 	}
-	chrcopy(dst, src, len);
+	ft_strcpy(dst, src, len);
 	return (dst);
 }
-
-/*
-1. Puntero a una cadena de destino.
-2. Puntero a una cadena de origen.
-3. Numero de bytes que se copiarán.
-
-Devuelve un puntero a la cadena dst.
-
-Copia los primeros n caracteres del objeto apuntado por src al objeto apuntado
-por dst. Sin embargo, se asegura de que no estén superpuestos.
-*/
