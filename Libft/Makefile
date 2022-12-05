@@ -6,7 +6,7 @@
 #    By: rvela-fe <rvela-fe@student.barcel>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/06 00:28:44 by rvela-fe          #+#    #+#              #
-#    Updated: 2022/12/06 00:35:51 by rvela-fe         ###   ########.fr        #
+#    Updated: 2022/12/06 00:38:21 by rvela-fe         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -17,7 +17,6 @@ CC = gcc
 FLAGS = -Wall -Werror -Wextra
 AR = ar -rcs
 RM = rm -f
-
 
 SRCS = ft_strlcat.c ft_strlen.c ft_strncmp.c \
 		ft_toupper.c ft_tolower.c ft_isalpha.c \
