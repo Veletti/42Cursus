@@ -6,14 +6,13 @@
 /*   By: rvela-fe <rvela-fe@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 20:36:26 by rvela-fe          #+#    #+#             */
-/*   Updated: 2022/12/03 17:55:58 by rvela-fe         ###   ########.fr       */
+/*   Updated: 2022/12/06 01:49:12 by rvela-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include<string.h>
-# include<ctype.h>
 # include<stdlib.h>
 # include<unistd.h>
 
