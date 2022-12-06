@@ -6,13 +6,13 @@
 /*   By: rvela-fe <rvela-fe@student.42barc...>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 13:29:32 by rvela-fe          #+#    #+#             */
-/*   Updated: 2022/10/15 17:09:00 by rvela-fe         ###   ########.fr       */
+/*   Updated: 2022/12/06 01:43:09 by rvela-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_space(char c)
+static int	ft_space(char c)
 {
 	return (c == '\t' || c == '\n' || c == '\v' || \
 		c == '\f' || c == '\r' || c == ' ');
