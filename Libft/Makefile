@@ -6,7 +6,7 @@
 #    By: rvela-fe <rvela-fe@student.barcel>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/06 00:28:44 by rvela-fe          #+#    #+#              #
-#    Updated: 2022/12/06 00:38:21 by rvela-fe         ###   ########.fr        #
+#    Updated: 2022/12/06 11:34:37 by rvela-fe         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -38,7 +38,7 @@ OBJS = $(SRCS:.c=.o)
 all: $(NAME)
 
 $(NAME): ${OBJS} ${HEADER}
-	$(AR) $(NAME) $(OBJS)
+	$(AR) $(NAME) $?
 
 clean:
 	$(RM) $(OBJS)
