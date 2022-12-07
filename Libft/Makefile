@@ -6,7 +6,7 @@
 #    By: rvela-fe <rvela-fe@student.barcel>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/06 00:28:44 by rvela-fe          #+#    #+#              #
-#    Updated: 2022/12/07 20:41:56 by rvela-fe         ###   ########.fr        #
+#    Updated: 2022/12/07 23:16:52 by rvela-fe         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -29,7 +29,6 @@ SRCS = ft_strlcat.c ft_strlen.c ft_strncmp.c \
 		ft_strmapi.c ft_putchar_fd.c ft_putstr_fd.c \
 		ft_putendl_fd.c ft_putnbr_fd.c ft_substr.c \
 		ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c \
-		main.c
 
 OBJS = $(SRCS:.c=.o)
 
