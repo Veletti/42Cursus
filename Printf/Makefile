@@ -6,7 +6,7 @@
 #    By: rvela-fe <rvela-fe@student.42barcelona.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/06 00:28:44 by rvela-fe          #+#    #+#              #
-#    Updated: 2023/03/18 01:36:29 by rvela-fe         ###   ########.fr        #
+#    Updated: 2023/03/18 19:25:44 by rvela-fe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,7 @@ all:	$(NAME)
 
 $(NAME):	$(OBJS)
 		@make -C $(LIBFT)
+		cp libft/libft.a ./$(NAME)
 		@$(AR) $(NAME) $(OBJS)
 		@echo "Printf compiled!"
 
