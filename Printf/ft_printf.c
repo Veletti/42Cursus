@@ -6,7 +6,7 @@
 /*   By: rvela-fe <rvela-fe@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 22:11:19 by rvela-fe          #+#    #+#             */
-/*   Updated: 2023/05/23 21:33:33 by rvela-fe         ###   ########.fr       */
+/*   Updated: 2023/05/23 23:21:25 by rvela-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ int	ft_printf(char const *str, ...)
 		}
 		else
 		{
-			write(1, str, 1);
+			if (write(1, str, 1) == -1)
+				return (-1);
 			len += 1;
 			str++;
 		}
