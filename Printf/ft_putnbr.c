@@ -25,21 +25,21 @@ int	ft_putnbr(int n, int len)
 		return (int_negative_min());
 	if (n < 0)
 	{
-		n = -n;
 		if (write (1, "-", 1) != 1)
 			return (-1);
+		n = -n;
 		len++;
 	}
 	if (n > 9)
 	{
-		len += ft_putnbr(n / 10, len);
+		len += ft_putnbr(n / 10, 0);
 		if (len == -1)
 			return (-1);
 		n = n % 10;
 	}
 	if (n <= 9)
 	{
-		if (ft_putchar((n + '0')) == -1)
+		if (ft_putchar(('0' + n)) == -1)
 			return (-1);
 		len++;
 	}
